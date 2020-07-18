@@ -21,7 +21,7 @@ RUN apt-get update -qq && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN cd /opt && \
-    git clone --depth 1 -b v3/master --single-branch https://github.com/SpiderLabs/ModSecurity && \
+    git clone --depth 1 -b v3.0.4 --single-branch https://github.com/SpiderLabs/ModSecurity && \
     cd ModSecurity && \
     git submodule init && \
     git submodule update && \
@@ -59,7 +59,7 @@ libcurl4-openssl-dev    \
 openssl
 
 RUN cd /opt && \
-git clone --depth 1 https://github.com/SpiderLabs/ModSecurity-nginx.git
+git clone --depth 1 --branch v1.0.1 https://github.com/SpiderLabs/ModSecurity-nginx.git
 
 RUN cd /opt && \
 git clone --recursive https://github.com/google/ngx_brotli.git
