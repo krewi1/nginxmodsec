@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+
+  nginx:
+    image: krewilone/nginxmodsec
+    ports:
+    - "9001:80"
+
+  whoami:
+    image: containous/whoami
