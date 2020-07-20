@@ -21,7 +21,7 @@ RUN apt-get update -qq && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN cd /opt && \
-    git clone --depth 1 -b v3.0.4 --single-branch https://github.com/SpiderLabs/ModSecurity && \
+    git clone --depth 1 -b v3/master --single-branch https://github.com/SpiderLabs/ModSecurity && \
     cd ModSecurity && \
     git submodule init && \
     git submodule update && \
