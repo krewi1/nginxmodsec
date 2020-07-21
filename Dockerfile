@@ -59,7 +59,10 @@ libcurl4-openssl-dev    \
 openssl
 
 RUN cd /opt && \
-git clone --depth 1 https://github.com/SpiderLabs/ModSecurity-nginx.git
+git clone https://github.com/SpiderLabs/ModSecurity-nginx.git
+
+RUN cd /opt/ModSecurity-nginx && \
+git checkout b6e097b8258c967a832ab7a1b6d238d5ee39f678
 
 RUN cd /opt && \
 git clone --recursive https://github.com/google/ngx_brotli.git
