@@ -2,7 +2,7 @@ version: "3.3"
 services:
 
   nginx:
-    image: krewilone/nginxmodsec
+    image: krewilone/nginxmodsec:3
     ports:
     - "9001:80"
 
